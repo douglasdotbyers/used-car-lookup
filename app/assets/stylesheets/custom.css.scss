@@ -1,0 +1,107 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* universals */
+
+html
+{
+  overflow-y: scroll;
+}
+
+.center
+{
+  text-align: center;
+}
+
+/* typography */
+
+h1, h2
+{
+  font-family:   "Roboto", sans-serif;
+  margin-top:    20px;
+  margin-bottom: 0px;
+  text-align:    center;
+}
+
+h1
+{
+  font-size:   40px;
+  font-weight: 100;
+}
+
+h2
+{
+  font-size:   20px;
+  font-weight: 300;
+}
+
+/* header */
+
+header
+{
+  background-color: $gray;
+
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding:       20px;
+
+  a, a:hover { color: $gray-light; }
+}
+
+/* body */
+
+body
+{
+  background-color: $gray-lighter;
+}
+
+/* footer */
+
+footer
+{
+  background-color: $gray-lighter;
+
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+  padding:    20px;
+
+  a, a:hover { color: $gray-light; }
+}
+
+/* forms */
+
+.alert
+{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.field_with_errors
+{
+  @extend .has-error;
+  .form-control
+  {
+    color: $state-danger-text;
+  }
+}
+
+input
+{
+  margin-top:    20px;
+  width:         100%;
+  border:        1px solid #bbb;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+input.btn
+{
+  margin-bottom: 20px;
+  margin-top:    20px;
+  width:         100%;
+  border:        1px solid #bbb;
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}

@@ -1,0 +1,38 @@
+<% provide(:title, "Used Car Lookup") %>
+
+<h1>Used Car Lookup</h1>
+<h2>Enter <%= t('activemodel.attributes.used_car.registration') %> and <%= t('activemodel.attributes.used_car.stock_reference') %> and click Search.</h2>
+
+<div class="row">
+
+  <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+
+    <%= form_for(@used_car , :method => :get , :url => search_path) do |f| %>
+
+      <% flash.each do |message_type , message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.text_field :registration , class: "form-control" , placeholder: t('activemodel.attributes.used_car.registration') %>
+
+      <%= f.text_field :stock_reference , class: "form-control" , placeholder: t('activemodel.attributes.used_car.stock_reference') %>
+
+      <div class="col-md-offset-3 col-md-6 col-md-offset-3">
+      <%= f.submit "Search" , class: "btn btn-lg btn-primary" , :name => nil %>
+      </div>
+
+    <% end %>
+
+  </div>
+
+  <% if @used_car && @used_car.valid? %>
+    <div class="center">
+      <% @used_car.image_urls.each do |image_url| %>
+        <p><%= image_tag(image_url) %></p>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>
