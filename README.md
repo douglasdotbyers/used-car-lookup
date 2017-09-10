@@ -1,6 +1,6 @@
 # Used Car Lookup
 
-Deployed, here - https://used-car-lookup.herokuapp.com/
+Deployed, here – https://used-car-lookup.herokuapp.com/
 
 Retrieve images for used cars.
 
